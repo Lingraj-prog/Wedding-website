@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #FAF7F2;
+    --color-ivory-light: #FFFDF9;
+    --color-ivory-dark: #F2ECE1;
+    --color-gold: #C5A059;
+    --color-gold-light: #ECC880;
+    --color-gold-dark: #9E7D3B;
+    --color-blush: #F5EBE6;
+    --color-blush-rose: #E5A9AC;
+    --color-burgundy: #531B27;
+    --color-charcoal: #2E2926;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-alex {
+    font-family: 'Alex Brush', cursive;
+  }
+
+  .font-royal {
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .font-sans-clean {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+/* Custom Gold Shimmer Text Effect */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #9E7D3B 0%, #D4AF37 40%, #FFE094 70%, #9E7D3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #ECC880 0%, #C5A059 50%, #9E7D3B 100%);
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #ECC880, #C5A059, #9E7D3B) 1;
+}
+
+/* Luxury Glass Card */
+.glass-luxury {
+  background: rgba(255, 253, 249, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+}
+
+.glass-luxury-dark {
+  background: rgba(30, 20, 22, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(236, 200, 128, 0.3);
+}
+
+/* Subtle Shimmer Animation */
+@keyframes shimmerAnimation {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(197,160,89,0.15) 0%, rgba(255,255,255,0.6) 50%, rgba(197,160,89,0.15) 100%);
+  background-size: 200% 100%;
+  animation: shimmerAnimation 4s infinite linear;
+}
+
+/* Floating Flower Petals Animation */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatGentle 6s ease-in-out infinite 2s;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9E7D3B;
+}
